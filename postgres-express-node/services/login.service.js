@@ -44,6 +44,10 @@ class LoginService {
 
       return {user, token};
     }
+
+    this.logger.error("Invalid password");
+    throw new error("Authentication failed");
+
   }
 
   generateToken(payload){
