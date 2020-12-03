@@ -22,7 +22,7 @@ class LoginService {
 
     if(!userRecord){
       this.logger.error("User not registered");
-      throw new error("Authentication failed");
+      throw new Error("Authentication failed");
     }
     
     this.logger.info("Checking password");
@@ -46,7 +46,7 @@ class LoginService {
     }
 
     this.logger.error("Invalid password");
-    throw new error("Authentication failed");
+    throw new Error("Authentication failed");
 
   }
 
